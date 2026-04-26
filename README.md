@@ -55,9 +55,3 @@ game's ranking or economy.
 - Analysis done statically in IDA Pro. Live tracing was not needed
   for the static portion that makes up these notes.
 
-## Contributing
-
-Open an issue if you find a mistake. Open a PR if you have an
-addition or a correction against a different build. Be specific —
-"this offset is wrong on build X.Y.Z, the right one is 0x...." beats
-"doesn't work for me".
