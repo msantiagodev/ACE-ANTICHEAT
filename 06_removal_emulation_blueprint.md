@@ -155,7 +155,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
 
 ---
 
-## What we don't yet know (TBD next iterations)
+## What we don't yet know
 
 1. **Server attestation flow.** Does the game upload an ACE-generated token at login? If so, `AnoSDKGetReportData` returning empty might cause server-side login rejection.
 2. **gcloud SDK verification.** What does the game's gcloud shell do at startup beyond loading libanogs? Does it validate the lib? (Answer in `libgcloud.so` — separate analysis pass.)

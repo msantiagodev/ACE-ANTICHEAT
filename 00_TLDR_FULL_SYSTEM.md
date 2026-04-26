@@ -426,6 +426,5 @@ Total time spent in this chain is the timing window measured by `ace_thread_crac
 | `08_gp7ioctl_protocol.md` | GP7Service IPC + stop kill |
 | `09_ace_inline_hooks.md` | The 8 libc hooks ACE installs |
 | `10_libanort_strings.md` | Decoded libanort strings |
-| `PROGRESS.md` | Per-iteration ledger |
 | Engineering scripts | `decrypt_*.py`, `ida_extract_*.py`, `parse_*.py` |
 | Decoded tables | `decoder_call_sites.txt`, `decoder_call_sites_libanort.txt`, `all_decoded_strings.txt` |

@@ -2,8 +2,6 @@
 
 **Goal:** 100% understanding of every check, every balance, every flow. End-state: removal or full emulation.
 
-**Iterating in:** Ralph loop (continuous). See `PROGRESS.md` for progress ledger.
-
 ---
 
 ## 0. Top-Level Picture
@@ -13,7 +11,7 @@ ACE ships as **two cooperating native libraries** loaded into the game process:
 | Library | Role | Size | .text | Functions |
 |---|---|---|---|---|
 | `libanogs.so` | "Game Service" — heartbeats, reports, runs the kill chain. **NEVER patch.** | 5,707,192 B | 0x35BDD0 | 24,207 |
-| `libanort.so` | "Runtime" — detection sensors (ptrace, mprotect, file integrity, virtual env). **Safe to patch (sensor NOPs).** | 1,691,784 B | 0x138A94 | (TBD this iteration) |
+| `libanort.so` | "Runtime" — detection sensors (ptrace, mprotect, file integrity, virtual env). **Safe to patch (sensor NOPs).** | 1,691,784 B | 0x138A94 | (TBD) |
 
 Both libraries:
 - Are **AArch64** ELF DYN shared objects
@@ -127,9 +125,9 @@ These are the load-bearing infrastructure of ACE. Renaming applied where obvious
 
 ---
 
-## 5. Subsystems (placeholders — to be expanded each iteration)
+## 5. Subsystems
 
-> Each subsystem will get its own file in `ace_full_map/` as iterations progress.
+> Each subsystem has its own file in this repo. See `INDEX.md` for the full categorized list.
 
 - `string_decryption.md` — 100 decoders, dispatcher table, integrity check
 - `init_flow.md` — JNI_OnLoad → AnoSDKInit → init_array constructors → detection thread spawns

@@ -100,7 +100,7 @@ v33 = sub_245440(v2);   // → ace_check_token_enable (renamed)
 v56 = sub_245328(v55);  // → ace_check_v_flag_3 (renamed)
 ```
 
-These read from the same config object that `ace_string_util_core()` returns. The exact bits are TBD next iteration — but pattern recognition shows:
+These read from the same config object that `ace_string_util_core()` returns. The exact bits are TBD — but pattern recognition shows:
 
 | Flag | Likely meaning | Affected scanners |
 |---|---|---|
@@ -147,7 +147,7 @@ Replace the entire function with `RET`. Registers NO scanners. Total kill of the
 
 ---
 
-## Next sub-iteration target
+## Next steps
 
 Find the **scan dispatch function** that walks this registry and calls each module's `scan()` method. That function's caller is the SCAN THREAD. From there we know:
 - How often each scan runs (period from sleep call)
@@ -156,6 +156,6 @@ Find the **scan dispatch function** that walks this registry and calls each modu
 
 Likely candidate: a function that takes the registry as input and iterates the linked list. Search for callers of `ace_register_all_scanner_modules` (`sub_28B8A8`) to see who builds the registry, then trace the registry pointer.
 
-Per iteration we should pick 5 module-specific scanners and decompile their actual scan() methods. Start with `frida_scan`, `elf_hook_scan`, `various_opcode`, `anti_root`, `module2`.
+Open work: pick 5 module-specific scanners and decompile their actual scan() methods. Start with `frida_scan`, `elf_hook_scan`, `various_opcode`, `anti_root`, `module2`.
 
-The `(v3 & 1) == 0` condition gating elf_hook_scan is the **single biggest insight of iteration 3**.
+The `(v3 & 1) == 0` condition gating elf_hook_scan is the **single biggest insight in this scanner module**.

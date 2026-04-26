@@ -118,6 +118,6 @@ This is the gate function. It's REGISTERED in the lookup but always returns `nul
 
 ---
 
-## Next sub-iteration target
+## Next steps
 
 Find where `ace_lookup_libc_by_name` is called from (xrefs) — that tells us when ACE actually resolves these names at runtime. Trace the result: it gets stored somewhere in `.data`. That somewhere is the **runtime libc dispatch table** — patching it is the cleanest universal bypass.

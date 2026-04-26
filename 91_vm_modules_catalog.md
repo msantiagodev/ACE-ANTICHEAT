@@ -92,7 +92,7 @@ With all 5 modules extracted as decrypted bytecode files on disk:
 - Find the RSA-2048 public key location in libanort (so we can either bypass signature check or sign substitute modules)
 - Decompile `ACE_VMModuleLoad` (libanort+0x13761C) to understand how bytecode addresses get resolved at load time
 
-## File catalog (this iteration's static artifacts)
+## File catalog
 
 | File | Size | Description |
 |---|---|---|

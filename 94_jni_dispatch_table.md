@@ -108,7 +108,7 @@ The full JNI surface ACE uses tells us exactly **what it scans**:
 - `ExceptionCheck`, `ExceptionClear`
 - ACE clears exceptions to avoid crashes during introspection
 
-## Other top __ff_<n> identified this iteration
+## Other top __ff_<n> identified
 
 - **`__ff_21`** = `ace_vm_ff21_memcpy_with_xlate` (libanort+0x13ADB8) — VM memcpy with VM↔host pointer translation. 82 invocations.
 - **`__ff_167`** = `ace_vm_ff167_returns_0` (libanort+0x13E9CC) — boolean false constant. 22 invocations.

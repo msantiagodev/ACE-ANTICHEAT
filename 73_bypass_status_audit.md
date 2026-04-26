@@ -1,4 +1,4 @@
-# Bypass Status & Mitigation Audit (Iteration 50)
+# Bypass Status & Mitigation Audit
 
 A comprehensive audit of our current 8-tier ACE bypass against everything we now know about ACE. What's killed, what's not, and where we're vulnerable.
 

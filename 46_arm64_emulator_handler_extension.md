@@ -1,6 +1,6 @@
-# ARM64 Emulator Handler Extension — Iteration 41
+# ARM64 Emulator Handler Extension
 
-This doc extends `22_libanort_arm64_emulator.md` with newly confirmed handlers from three mapping passes. **Coverage now: 80+ of 148 (~54%) opcode handlers documented.**
+This doc extends `22_libanort_arm64_emulator.md` with newly confirmed handlers from three mapping passes. **Coverage: 80+ of 148 (~54%) opcode handlers documented.**
 
 ## CRITICAL FINDING — opcode 1 = SVC syscall bridge (see `48_svc_syscall_bridge.md`)
 
@@ -25,7 +25,7 @@ This doc extends `22_libanort_arm64_emulator.md` with newly confirmed handlers f
 | `ace_vm_op_extr` | 0x142D64 | `EXTR Rd, Rn, Rm, #lsb` | 64-bit "double-width shift" (concatenate then shift) |
 | `ace_vm_op_ldr_immediate` | 0x142F04 | `LDR Rt, [Rn{, #imm}]` | scaled (v2=0 with pre/post-index via bits 0xC00) and unscaled (v2=1) |
 
-## Iteration 41 third pass — additional ~13 handlers
+## Third pass — additional ~13 handlers
 
 | Handler | Address | Decoded Instruction | Notes |
 |---|---|---|---|
@@ -46,7 +46,7 @@ This doc extends `22_libanort_arm64_emulator.md` with newly confirmed handlers f
 | `ace_vm_op_subs_extended_reg_v2` | 0x144C28 | `SUBS Rd, Rn, Rm, ext #shift` | extended-reg variant (alt encoding) |
 | `ace_vm_op_ldur` | 0x1436A4 | `LDUR Rt, [Rn, #simm9]` | Load with unscaled signed 9-bit imm |
 
-## Iteration 40 second pass — additional 14 handlers
+## Second pass — additional 14 handlers
 
 | Handler | Address | Decoded Instruction | Notes |
 |---|---|---|---|
@@ -159,7 +159,7 @@ We now have ~36% of the opcode table mapped. The remaining 95 handlers include:
 - Move variants (MOV, MOVK, MOVN, MOVZ)
 - More shift register variants
 
-## To-do (next iteration)
+## To-do
 
 - Decompile remaining ~95 handlers in batches of 10
 - Identify which handlers expose host memory (the "dangerous" ones)

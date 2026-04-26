@@ -123,7 +123,7 @@ To find the public key: search libanort's `.rodata` for ASN.1-style RSA modulus 
 
 If we patch out the signature check, we can substitute a craft-built `a64.dat` with our own VM module — gaining the ability to inject ARM64 detection-bypass code into the VM emulator itself. Powerful but requires the unpacker to be reverse-engineered first.
 
-## Static dump artifacts (this iteration)
+## Static dump artifacts
 
 | File | Path | Size | Purpose |
 |---|---|---|---|
@@ -182,7 +182,7 @@ So our 17 vs 18 module arithmetic suggests:
 - Big ZIP contains 18 modules: every detection module ACE knows how to run
 - Small ZIP contains 17: a strict subset, missing one module that's GP7-specific or heavyweight
 
-## Static dump artifacts (this iteration, full set)
+## Static dump artifacts (full set)
 
 | File | Size | Purpose |
 |---|---|---|
@@ -193,7 +193,7 @@ So our 17 vs 18 module arithmetic suggests:
 | `embedded_vm_modules_BIG/a64.dat` | 309,474 | Big a64.dat (v3, 18 modules) |
 | `embedded_vm_modules_BIG/a64.sig` | 256 | RSA-2048 signature for big a64.dat |
 
-## Renames applied this iteration
+## IDB renames applied
 
 | Address | Old | New |
 |---|---|---|

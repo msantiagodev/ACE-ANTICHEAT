@@ -120,7 +120,7 @@ To inject a packet that ACE will accept as legitimate:
 
 There is **no** cryptographic signature. The 16-byte session blob is the only secret, and CRC-32 provides only integrity (not authentication).
 
-## Renames applied this iteration
+## IDB renames applied
 
 | Address | Old | New |
 |---|---|---|

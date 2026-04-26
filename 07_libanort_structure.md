@@ -110,7 +110,7 @@ The fix: hook `madvise` to lie when ACE asks (return success without dropping pa
 
 libanort is the library **we previously patched** with 27 sensor NOPs. The MD5 hash matches our existing `instant_reload_mod/modding.txt` setup. The 11 patched offsets in our existing Main.cpp target individual sensors here. We extended to 27 total recently.
 
-## What I haven't yet mapped (for next iteration)
+## Not yet mapped
 
 1. **`ACE_DetectionPoller` deep dive.** It's heavily flattened — needs disassembly + register-tracing.
 2. **The `g_aco_array` and `g_acf_array` globals.** These are exported symbols and likely contain function pointer tables for the various detection routines. Mapping these tells us the scan callback layout.
@@ -139,4 +139,4 @@ If 4 still dies, the killer is either:
 - gcloud SDK shell's own checks (separate library)
 - Server-side rejection at login
 
-Each of those needs separate analysis next iteration.
+Each of those needs separate analysis.

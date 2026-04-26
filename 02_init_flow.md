@@ -23,7 +23,7 @@ Mapped:
 | 5 | `0x22DE40` | TBD |
 | 6 | `0x23130C` | TBD |
 | 7 | `0x33957C` | TBD |
-| 8–59 | various | TBD — need per-iteration analysis |
+| 8–59 | various | TBD — needs further analysis |
 
 Each ctor is renamed `ace_init_ctor_NN` in the IDB. Most are 0-arg `void()` callbacks — used for setting up:
 - Vtable initialization (function pointer arrays in `.data`)

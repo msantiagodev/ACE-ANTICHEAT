@@ -163,7 +163,7 @@ void dump_embedded_vm_zip() {
 ```
 Then `unzip` to inspect what bytecode is actually inside.
 
-## Renames applied this iteration
+## IDB renames applied
 
 | Address | Old | New |
 |---|---|---|

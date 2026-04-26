@@ -130,7 +130,7 @@ For each decrypted JNI method, we can:
 
 ## Renames + comments
 
-No new IDB renames this iteration (cipher is in code already, function names confirmed).
+No new IDB renames (cipher is in code already, function names confirmed).
 
 ## Static artifacts
 

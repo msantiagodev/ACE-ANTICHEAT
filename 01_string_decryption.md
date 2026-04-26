@@ -84,7 +84,7 @@ The single-function generic decoder `ace_decrypt_string` does NOT dispatch throu
 - libanort decoders go through `ACE_AtomicLoad/Store` for thread-safe access AND have a kill-on-failure-twice anti-tamper.
 - The generic `ace_decrypt_string` caches the result (subsequent calls = O(1)).
 
-## Verified strings (this iteration)
+## Verified strings
 
 | Index | Decoder | Decrypted text | Used as |
 |---|---|---|---|

@@ -115,7 +115,7 @@ These 11 patches stop the **detection sensors** but not:
 
 So: 11 ANORT patches + 8 integrated tiers = **complete coverage** of all known kill mechanisms.
 
-## To-do (next iteration)
+## To-do
 
 - Verify each patched function actually returns correctly with `MOV X0, #0; RET` (some might check signed value, expecting negative for "fail", positive for "ok" — we'd need to flip).
 - Find more sensors (this is 11, but ACE has more in libanogs we haven't patched yet — see scanner registry).

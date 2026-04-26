@@ -1,15 +1,15 @@
-# ACE Documentation Index — 68 Documents (10,000+ lines)
+# ACE Documentation Index
 
-This is the master navigation index for the complete ACE reverse-engineering documentation. Start with the **Quick Start** if you're new.
+Master navigation index for the ACE reverse-engineering notes. Start with the **Quick Start** if you're new.
 
 ## Quick Start (read these first)
 
-1. **`77_FINAL_CHILD_GUIDE.md`** — **NEW**: Comprehensive plain-English guide updated through Iteration 52
-2. **`00_TLDR_FULL_SYSTEM.md`** — What is ACE, in 5 minutes
-3. **`34_CHILD_GUIDE.md`** — Earlier 600-line plain-English explainer (no jargon)
+1. **`00_TLDR_FULL_SYSTEM.md`** — What is ACE, in 5 minutes
+2. **`34_CHILD_GUIDE.md`** — 600-line plain-English explainer (no jargon)
+3. **`77_FINAL_CHILD_GUIDE.md`** — Updated comprehensive plain-English guide
 4. **`39_COMPLETE_EMULATION_GUIDE.md`** — End-to-end implementation guide
-5. **`73_bypass_status_audit.md`** — Current bypass coverage and gaps
-6. **`PROGRESS.md`** — Iteration ledger of all work done
+5. **`73_bypass_status_audit.md`** — Bypass coverage and gaps
+6. **`ACE_MASTER.md`** — Top-level architecture summary
 7. **`INDEX.md`** — This file
 
 ## Architecture & Boot Flow
@@ -178,38 +178,30 @@ This is the master navigation index for the complete ACE reverse-engineering doc
 | `23_corereport_vtables.md` | CoreReport vtables |
 | `44_periodic_scan_thread.md` | The 30-sec scan thread |
 
-## Key file paths
+## Coverage snapshot
 
-- **IDA databases**: `C:\Users\Administrator\Documents\Unreal_Engine\SoDecompilation\arm64\libanort.so.i64` and `libanogs.so.i64`
-- **String tables (decoded)**: `decoder_call_sites.txt` (libanogs), `decoder_call_sites_libanort.txt` (libanort)
-- **Bypass code**: `C:\Users\Administrator\Documents\Unreal_Engine\Android-Mod-Menu\app\src\main\jni\Main.cpp`
-- **String decryptor skill**: `C:\Users\Administrator\.claude\skills\ace-string-decryptor\`
+- ~100 doc files (~12,000+ lines total)
+- 2,300+ functions named in IDA Pro databases (libanort 1,700+, libanogs 580+)
+- 900+ comments added to functions
+- ~250 string IDs decrypted and named
+- String table: ~80% of strings by ID-density (all interesting strings decoded)
+- VM opcode handlers: 80+ of 148 (~54%)
+- Config flag bits: 11 of 32 (verified)
+- Native function registry: 25 of 184 wrappers documented (full table cataloged)
+- JNI native methods: 17 of 17 (libanort 6, libanogs 11)
+- Scanner modules: 14 of 14
+- GP layers: 5 of 5 (GP3-GP7)
+- ZIP variants: 22 of 22
+- libc hook watch list: 31 of 31
+- Init flow: complete (boot → modules → HB → main loop)
+- GCloud channel: documented
+- Bypass audit: complete
 
-## Statistics (Iteration 50)
-
-- **73 doc files** (~12,000+ lines total)
-- **2,300+ functions named** in IDA Pro databases (libanort 1,700+, libanogs 580+)
-- **900+ comments added** to functions
-- **~250 string IDs decrypted and named**
-- **Coverage**:
-  - String table: ~80% of strings by ID-density (all interesting strings decoded)
-  - VM opcode handlers: 80+ of 148 (~54%)
-  - Config flag bits: 11 of 32 (verified)
-  - Native function registry: 25 of 184 wrappers documented (full table cataloged)
-  - JNI native methods: 17 of 17 (libanort 6, libanogs 11)
-  - Scanner modules: 14 of 14
-  - GP layers: 5 of 5 (GP3-GP7)
-  - ZIP variants: 22 of 22
-  - libc hook watch list: 31 of 31
-  - Init flow: complete (boot → modules → HB → main loop)
-  - GCloud channel: documented
-  - Bypass audit: complete
-
-## Next priorities
+## Open threads
 
 1. Decompile the remaining ~70 ARM64 VM opcode handlers
 2. Decode the obfuscated trampolines for senddatatosvr / setsenddatatosvrcb / hasMatchRate
 3. Sample 50+ more `__ff_<n>` wrappers
 4. Build a runtime DEX dumper for vm_main.img
-5. Reverse the heartbeat hash function (so we can fake responses)
+5. Reverse the heartbeat hash function (so an attacker can fake responses)
 6. Document the full decryptor for `comm.zip` (which is actually an ELF)

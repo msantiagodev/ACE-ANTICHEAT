@@ -171,7 +171,7 @@ Not here. The actual server fetch is in a different function. Candidates:
 - `ACE_LoadSignedConfig` (libanort+0x12C324) — separate function, mentioned in init
 - TDM channel's vfn[40] — submits reports (may include response handling)
 
-Will trace further in next iteration.
+Will trace further later.
 
 ## Bypass implications
 

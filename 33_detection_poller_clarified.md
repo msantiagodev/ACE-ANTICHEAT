@@ -60,7 +60,7 @@ This is a clever design: ACE measures pthread_create timing as a debugger detect
 
 ## Why we mistakenly thought it was the poller
 
-Earlier docs (PROGRESS.md iterations 1-8) labeled it as the periodic poller because:
+Earlier drafts labeled it as the periodic poller because:
 1. The name "DetectionPoller" suggested it
 2. The function size (956 bytes) suggested complexity
 3. We didn't verify what it actually does inside
@@ -106,7 +106,7 @@ So the kill is delayed and indirect. But it's a real kill mechanism — KILL PAT
 
 **Tier 4 prevents the trap from firing in the first place.**
 
-## To-do (next iteration)
+## To-do
 
 - Decompile `ace_pthread_create_detached` to understand what stack size 0x80000 does
 - Find where ctx.+48 == 31 is read (the consumers of the thread_cracked flag)

@@ -116,7 +116,7 @@ This explains why ACE_ConfigUpdateFromServer is so important — without it, ACE
 3. **Network-level blocking is the strongest defense.** If we firewall `*.anticheatexpert.com` at DNS/iptables level, ACE never updates rules.
 4. **For full emulation, we don't need to reproduce the engine** — a stub libanogs.so that returns "no rules to evaluate" defeats the script engine entirely.
 
-## Expanded operator inventory (iteration 16-17 additions)
+## Expanded operator inventory
 
 ### Type-conversion and bit-cast
 | Address | Operator |
@@ -258,7 +258,7 @@ The opcode reads `node+28` (WORD) as the access size. Same opcode handles 1/2/4/
 - **2 major data types**: dict (0x18) and string-intern pool (0x78)
 - **1 special case**: target module (libUE4.so) gets dedicated parser
 
-## To-do (next iteration)
+## To-do
 
 - Find where the expression-tree is *deserialized* from the downloaded ZIP. That tells us the wire format.
 - Find xrefs to `ace_arm64_instruction_relocator` to confirm it's only invoked via the script engine.

@@ -75,7 +75,7 @@ Every emulated module that needs C runtime support links against this list:
 
 ## The 162 `__ff_<n>` functions
 
-Indexed slots — likely ACE-internal helpers (e.g., `__ff_1` = some scanner primitive). The `__ff_` prefix is a private convention. Need to enumerate by walking `g_ace_native_function_table_ff` — task left for next iteration.
+Indexed slots — likely ACE-internal helpers (e.g., `__ff_1` = some scanner primitive). The `__ff_` prefix is a private convention. Need to enumerate by walking `g_ace_native_function_table_ff` — left as future work.
 
 Example seen so far (incomplete):
 - `__ff_1` → `0x13A75C`
@@ -140,7 +140,7 @@ If the emulated code somehow obtains a host address (e.g., by calling a wrapper 
 
 4. **An attacker could ADD entries to the registry** by patching `ace_init_native_function_registry` to install rogue wrappers, but that's offensive territory we don't need.
 
-## To-do (next iteration)
+## To-do
 
 - Enumerate all 162 `__ff_<n>` wrappers — what do they do?
 - Look for "host memory" wrappers (any function that doesn't add `module[47]` is dangerous)

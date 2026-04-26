@@ -126,7 +126,7 @@ When the main process dies, GP7Service typically also exits. When GP7Service det
 
 ---
 
-## Next iteration
+## Next steps
 
 - Decompile `gp7ioctl` handler to understand the GP7Service IPC
 - Decode more strings (the 32 FAIL entries — try other decoders)

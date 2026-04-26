@@ -117,7 +117,7 @@ A noteworthy artifact: every module has the alphanumeric key string itself (`'01
 
 Plus all 22 named bridges (memset, memcpy, _Znwm, _Znam, _ZdlPv, _ZdaPv, plus 16 stub returns).
 
-## IDB updates this iteration
+## IDB updates
 
 - 5 functions renamed (__ff_122/159/180/169/195)
 - 5 explanatory IDB comments added

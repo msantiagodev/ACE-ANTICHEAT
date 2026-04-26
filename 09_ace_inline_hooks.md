@@ -84,6 +84,6 @@ Best combined approach:
 - Hook `gp7ioctl` to drop "stop" (so Java service can't kill us)
 - Disable TDM telemetry so reports don't leave the device
 
-## Next iteration target
+## Next steps
 
 Decompile `ACE_ObfuscatedStub_37AAC` to know what each dispatcher actually does (logging? validation? counter?). Knowing this tells us whether ACE's dispatcher itself can be silently disabled vs needing full passthrough emulation.

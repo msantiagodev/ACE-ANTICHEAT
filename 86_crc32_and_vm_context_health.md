@@ -1,6 +1,6 @@
 # `ACE_EventSignal` is just CRC-32 + VM Context Health Check
 
-Two important findings this iteration:
+Two important findings:
 
 ## 1. `ACE_EventSignal` is plain CRC-32
 

@@ -275,4 +275,4 @@ For our specific bypass (Division Resurgence, MuMu Player):
 - Frida/root signals fire only if those tools are installed (they aren't on our setup)
 - Heartbeat may or may not run (depends on Tier 8 timing)
 
-This document serves as the reference for the next iteration of bypass hardening.
+This document serves as the reference for further bypass hardening work.

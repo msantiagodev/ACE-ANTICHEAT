@@ -118,7 +118,7 @@ The 29 identified bridges show ACE's bytecode runtime falls into these functiona
 
 These five buckets together compose every detection workflow in ACE's VM bytecode.
 
-## IDB updates this iteration
+## IDB updates
 
 - 11 functions renamed
 - 2 explanatory comments added (sub_120EE0, ACE_RawSyscall)

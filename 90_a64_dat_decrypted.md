@@ -160,7 +160,7 @@ For substitute payload to work:
 | `88_state_struct_and_embedded_vm_zip.md` | The two embedded ZIPs |
 | `22_libanort_arm64_emulator.md` | The VM that runs decrypted bytecode |
 
-## Static artifacts (this iteration)
+## Static artifacts
 
 | File | Size | Description |
 |---|---|---|

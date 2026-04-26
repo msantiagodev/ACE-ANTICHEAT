@@ -28,7 +28,7 @@ The module struct (allocated to 0xE8 bytes by ACE_VMModuleLoad) contains a compl
 | `+393` | `is_special_module` | 1 if module name matched DecryptString(11285)/(11259) |
 | `+400` | `parser_ctx` | parser context (has func table at +104) |
 
-## Confirmed instruction-class handlers (iteration 19 expanded)
+## Confirmed instruction-class handlers
 
 These were verified by decompiling their decode logic and matching against ARM64 spec:
 
@@ -74,7 +74,7 @@ This means **the emulator can call native code** via two mechanisms:
 
 This is the **bridge** between emulated downloaded code and native ACE host functions. Specific opcodes can effectively call into ACE's native API surface, bypassing the emulator's sandbox model.
 
-## Updated confirmed-handler count (iteration 26)
+## Updated confirmed-handler count
 
 We've now mapped **31 of 148** opcode handlers (~21% coverage):
 
@@ -187,7 +187,7 @@ We have two complementary attacks:
 
 Each is a single-point kill. Tier 8 is the cleanest because it's at the highest level.
 
-## To-do (next iteration)
+## To-do
 
 - Decompile every one of the 148 handlers and build a complete instruction table.
 - Find the "bridge" opcodes that let the emulated code call host functions.
